@@ -287,13 +287,14 @@ tasks:
       - "6"
     scriptarguments:
       humanReadableEntryId:
-        simple: ${lastCompletedTaskEntries}
-        transformers:
-        - operator: atIndex
-          args:
-            index:
-              value:
-                simple: "1"
+        complex:
+          root: lastCompletedTaskEntries
+          transformers:
+            - operator: atIndex
+              args:
+                index:
+                  value:
+                    simple: "1"
       substring:
         simple: http://www.avanan.com
     separatecontext: false
@@ -324,13 +325,14 @@ tasks:
       - "6"
     scriptarguments:
       humanReadableEntryId:
-        simple: ${lastCompletedTaskEntries}
-        transformers:
-        - operator: atIndex
-          args:
-            index:
-              value:
-                simple: "1"
+        complex:
+          root: lastCompletedTaskEntries
+          transformers:
+            - operator: atIndex
+              args:
+                index:
+                  value:
+                    simple: "1"
       substring:
         simple: https://twitter.com/PhilipsBeLux
     separatecontext: false
